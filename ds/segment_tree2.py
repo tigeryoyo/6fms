@@ -1,5 +1,15 @@
 # -*- coding: utf-8 -*-
 
+# 以下是带懒惰标记的线段树
+class TreeNode(object):
+	def __init__(self, irange):
+		self.lchild = None
+		self.rchild = None
+		self.irange = irange
+		self.sum_value = 0  # 和
+		self.lazy = 0  # 懒惰标记
+
+
 class SegmentTree2(object):
 	def __init__(self, irange):
 		self.root = TreeNode(irange)
